@@ -34,3 +34,4 @@ export function betterThanAverageV2(classPoints: number[], yourPoints: number) {
 }
 
 
+

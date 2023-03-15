@@ -32,3 +32,47 @@ export function betterThanAverageV1(classPoints: number[], yourPoints: number) :
 export function betterThanAverageV2(classPoints: number[], yourPoints: number) {
     return (classPoints.reduce((a, v) => a + v) / classPoints.length) < yourPoints;
 }
+
+//? Can you find the needle in the haystack?
+//? Write a function findNeedle() that takes an array full of junk but containing one "needle"
+//? After your function finds the needle it should return a message (as a string) that says:
+//? "found the needle at position " plus the index it found the needle, so:
+//* My Answer 
+export function findNeedleV1(haystack: any[]):string {
+    const position = haystack.indexOf('needle')
+    return `found the needle at position ${position.toString()}`
+}
+//! Better Answer 
+export function findNeedleV2(haystack: any[]): string {
+    return `found the needle at position ${haystack.indexOf('needle')}`;
+}
+
+//? Let's play! You have to return which player won! In case of a draw return Draw!.
+//* My Answer 
+export function rpsV1(p1: string, p2: string): string {
+    if (p1 === p2) {
+        return 'Draw!';
+    }
+    if (
+        (p1 === 'rock' && p2 === 'scissors') ||
+        (p1 === 'paper' && p2 === 'rock') ||
+        (p1 === 'scissors' && p2 === 'paper')
+    ) {
+        return 'Player 1 won!';
+    } else {
+        return 'Player 2 won!';
+    }
+}
+//! Better Answer 
+const beats: {[index: string]: string} = {
+    'scissors': 'paper',
+    'paper': 'rock',
+    'rock': 'scissors',
+}
+
+export function rpsV2(p1: string, p2: string): string{
+    if (p1 === p2) return 'Draw!'
+    
+    if (beats[p1] == p2) return 'Player 1 won!'
+    return 'Player 2 won!'
+}

@@ -76,3 +76,26 @@ export function rpsV2(p1: string, p2: string): string{
     if (beats[p1] == p2) return 'Player 1 won!'
     return 'Player 2 won!'
 }
+
+//? Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+//* My Answer 
+export function getVolumeOfCuboidV1(length: number, width:number, height:number): number {
+    return length * width * height
+}
+//! Better Answer 
+export function getVolumeOfCuboidV2(l: number, w:number, h:number): number {
+    return l * w * h
+}
+
+//? Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+//* My Answer 
+export function greetV1(name: string): string {
+    return `Hello, ${name} how are you doing today?`
+}
+//! Better Answer 
+export const greetV2 = (name: string): string => `Hello, ${name} how are you doing today?`;
+
+
+
+
+

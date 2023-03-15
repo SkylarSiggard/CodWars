@@ -32,6 +32,3 @@ export function betterThanAverageV1(classPoints: number[], yourPoints: number) :
 export function betterThanAverageV2(classPoints: number[], yourPoints: number) {
     return (classPoints.reduce((a, v) => a + v) / classPoints.length) < yourPoints;
 }
-
-
-

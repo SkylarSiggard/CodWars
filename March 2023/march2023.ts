@@ -96,6 +96,39 @@ export function greetV1(name: string): string {
 export const greetV2 = (name: string): string => `Hello, ${name} how are you doing today?`;
 
 
+//? Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+//? Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+//* My Answer 
+export function paperworkV1(n: number, m :number): number{
+    if (n < 0 || m < 0 || n * m < 0) { 
+        return 0 } 
+    else return n * m
+}
+//! Better Answer 
+export function paperworkV2(n: number, m :number): number{
+    return (n < 1 || m < 1) ? 0 : n * m;
+}
+
+
+//? Write a function which calculates the average of the numbers in a given list.
+//* My Answer 
+export function findAverageV1(array: number[]): number {
+    if (array.length > 0) {
+        let num = 0;
+        for (let value of array) {
+            num += value;
+        }
+        return num / array.length;
+    } else return 0
+}
+//! Better Answer 
+export function findAverageV2(array: number[]): number {
+    return !array.length ? 0 : array.reduce((a, b) => a + b, 0) / array.length;
+}
+
+
+
+
 
 
 

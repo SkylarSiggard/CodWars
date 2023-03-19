@@ -182,6 +182,24 @@ export function number(busStops:number[][]):number {
 }
 
 
+//? You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. 
+//? If the word's length is even, return the middle 2 characters.
+//* My Answer 
+export function getMiddleV1(s: string): string {
+    const middleIndex = Math.floor(s.length / 2);
+    if (s.length % 2 === 0) {
+        return s.slice(middleIndex - 1, middleIndex + 1);
+    } else {
+        return s.slice(middleIndex, middleIndex + 1);
+    }
+}
+//! Better Answer 
+export function getMiddleV2(s:string) {
+    const middle = Math.ceil(s.length / 2) - 1
+    return s.slice(middle, s.length - middle)
+}
+
+
 
 
 

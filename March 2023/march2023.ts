@@ -268,3 +268,23 @@ export function removeCharV1(str: string): string {
 export const removeCharV2 = (str: string): string => str.slice(1, -1)
 
 
+//? Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+//* My Answer 
+export function invertV1(array: number[]): number[] {
+    let nums: number[] = [] //todo I need to remember number[] is the way to make a list of numbers. 
+    for (let i:number = 0; i < array.length; i++){
+      nums.push(array[i] * -1)
+    }
+    return nums;
+}
+//! Better Answers
+export const invertV2 = (array: number[]) => array.map(n => -n);
+
+
+
+
+
+
+
+
+

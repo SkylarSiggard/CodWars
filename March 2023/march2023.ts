@@ -258,8 +258,13 @@ export function DNAtoRNAV2(dna: string): string {
 }
 
 
-
-
-
+//? It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. 
+//? You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+//* My Answer 
+export function removeCharV1(str: string): string {
+    return str.slice(1, -1);
+}
+//! Better Answer 
+export const removeCharV2 = (str: string): string => str.slice(1, -1)
 
 

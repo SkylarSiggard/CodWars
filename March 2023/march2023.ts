@@ -282,6 +282,21 @@ export const invertV2 = (array: number[]) => array.map(n => -n);
 
 
 
+//? Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+//* My Answer 
+export function doubleCharV1(str: string): string {
+    return str.split('').map(char => char + char).join('');
+}
+//! Better Answer 
+export const doubleCharV2 = (str: string): string =>
+    str
+        .split('')
+        .map(c => c.repeat(2))
+        .join('');
+
+
+
+
 
 
 

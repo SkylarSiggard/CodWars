@@ -289,10 +289,7 @@ export function doubleCharV1(str: string): string {
 }
 //! Better Answer 
 export const doubleCharV2 = (str: string): string =>
-    str
-        .split('')
-        .map(c => c.repeat(2))
-        .join('');
+    str.split('').map(c => c.repeat(2)).join('');
 
 
 
@@ -303,3 +300,5 @@ export const doubleCharV2 = (str: string): string =>
 
 
 
+
+    

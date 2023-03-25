@@ -292,13 +292,48 @@ export const doubleCharV2 = (str: string): string =>
     str.split('').map(c => c.repeat(2)).join('');
 
 
-
-
-
-
-
-
-
-
-
+//? Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+//? Note: a and b are not ordered!
+//* My Answer 
+export function getSumV1(a: number, b: number): number {
+    let num: number = 0
+    if (a < b){
+        for (let i = a; i <= b; i++) {
+        num += i
+        }
+    } else if (a > b) {
+        for (let i = b; i <= a; i++) {
+        num += i
+        }
+    } else {
+        num = a
+    }
+    return num
+}
+//! Better Answer 
+export function getSumV2(a: number, b: number): number {
+    const start = a < b ? a : b;
+    const end = start === a ? b : a;
     
+    let sum = 0;
+    
+    for (let i = start; i <= end; i++) {
+        sum += i;
+    }
+    
+    return sum;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

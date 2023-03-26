@@ -324,6 +324,18 @@ export function getSumV2(a: number, b: number): number {
     return sum;
 }
 
+//? Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+//? The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. 
+//* My Answer 
+export function setAlarmV1(employed: boolean, vacation: boolean) {
+    return (employed === true && vacation === false) ? true : false
+}
+//! Better Answer 
+export function setAlarmV2(employed: boolean, vacation: boolean) {
+    return employed && !vacation
+}
+
+
 
 
 

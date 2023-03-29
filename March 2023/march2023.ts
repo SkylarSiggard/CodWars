@@ -348,9 +348,29 @@ export const minV1 = (list: number[]): number => {
 export const min = list => Math.min(...list);
 export const max = list => Math.max(...list);
 
-
-
-
+//? Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+//* My Answer 
+export function getGradeV1(a: number, b: number, c: number): string {
+    let score:number = (a+b+c)/3
+    if (score >= 90 && score <= 100){
+        return 'A'
+    } else if (score >= 80 && score < 90){
+        return 'B'
+    } else if (score >= 70 && score < 80){
+        return 'C'
+    } else if (score >= 60 && score < 70){
+        return 'D'
+    } else return 'F'
+}
+//! Better Answer 
+export function getGradeV2(a: number, b: number, c: number): string {
+    const mean = (a + b + c) / 3;
+    if (mean >= 90) return 'A';
+    if (mean >= 80) return 'B';
+    if (mean >= 70) return 'C';
+    if (mean >= 60) return 'D';
+    return 'F';
+}
 
 
 
